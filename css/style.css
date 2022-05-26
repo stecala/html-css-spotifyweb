@@ -158,6 +158,13 @@ img{
     justify-content: center;
     align-items: center;
 }
+.hamburger{
+    color: var(--color5);
+    text-align: end;
+    font-size: 1.5rem;
+    padding-top: 16px;
+    display: none;
+}
 /************************* 
            SIDEBAR
 **************************/
@@ -374,7 +381,7 @@ footer{
         width: calc(100% / 2 - 20px);
     }
     .now-playing{
-        width: 20%;
+        width: 25%;
     }
     .ico-now-playing{
         flex-direction: column;
@@ -422,5 +429,11 @@ footer{
     .volume .timeline{
         display: none;
         flex-direction: column;    
+    }
+    .nav-main ul{
+        display: none;
+    }
+    .hamburger{
+        display: block;
     }
 }
