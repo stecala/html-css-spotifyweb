@@ -11,6 +11,7 @@
     --color4: rgba(0, 0, 0, 0.7);
     --color5: white;
     --color6: #ADFF2F;
+    --color7: #52DD48;
 }
 body{
     font-family: 'Montserrat', sans-serif;
@@ -25,6 +26,9 @@ img{
 .jc-end{
     justify-content: flex-end;
 }
+.jc-center{
+    justify-content: center;
+}
 .align-center{
     align-items: center;
 }
@@ -36,6 +40,9 @@ img{
 }
 .end{
     align-items: flex-end;
+}
+.f-wrap{
+    flex-wrap: wrap;
 }
 /************************* 
            MAIN 
@@ -67,6 +74,83 @@ img{
     cursor: pointer;
     transform: scale(1.1);
 }
+.nav-main{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.nav-main ul{
+    list-style: none;
+}
+.nav-main ul li{
+    display: inline-block;
+    padding: 20px 18px;
+    transition: 0.5s ease-in-out;
+}
+.border-main{
+    height: 2px;
+    width: 60px;
+    margin: 0 auto;
+    border-top: 3px solid var(--color6);
+}
+.section-player{
+    padding: 20px 20px;
+}
+.section-player h2{
+    color: var(--color5);
+    padding-bottom: 5px;
+}
+.cont-box{
+    padding: 30px 0;
+    gap: 20px;
+}
+.box{
+    width: calc(100% / 6 - 20px);
+    text-align: center;
+}
+.small-title{
+    color: var(--color5);
+    font-weight: bold;
+    padding: 10px 0;
+}
+.artist{
+    font-size: 0.7rem;
+}
+.rounded{
+    border-radius: 50%;
+}
+.cont-hover{
+    position: relative;
+}
+.hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+.fa-play{
+    color: var(--color3);
+    width: 3.4rem;
+    background-color: var(--color7);
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: 10px 10px 10px 15px;
+}
+.box:hover{
+    cursor: pointer;
+}
+.box:hover img{
+    opacity: 0.3;
+}
+.box:hover .hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /************************* 
            SIDEBAR
 **************************/
@@ -92,10 +176,17 @@ nav ul,
 }
 nav ul li{
     font-weight: bold;
+    transition: 0.5s ease-in-out;
 }
 nav ul li:first-child{
     color: var(--color5);
     position: relative;
+}
+nav ul li:hover,
+.nav-main ul li:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
 }
 .border{
     height: 50px;
@@ -166,6 +257,16 @@ footer{
 /************************* 
           @MEDIA
 *************************/
+@media all and (max-width: 1100px){
+    .box{
+        width: calc(100% / 4 - 20px);
+    }
+}
+@media all and (max-width: 700px){
+    .box{
+        width: calc(100% / 2 - 20px);
+    }
+}
 @media all and (max-width: 600px){
     .sidebar{
         width: 50px;
@@ -184,3 +285,4 @@ footer{
         margin: 0 auto;
     }
 }
+
