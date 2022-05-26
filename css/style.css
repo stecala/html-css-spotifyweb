@@ -44,6 +44,13 @@ img{
 .f-wrap{
     flex-wrap: wrap;
 }
+.container::-webkit-scrollbar {
+    width: 6px;
+}              
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--color5); 
+    border-radius: 20px;    
+  }
 /************************* 
            MAIN 
 **************************/
@@ -59,6 +66,7 @@ img{
     top: 0;
     padding: 0 20px;
     background-color: var(--color4);
+    z-index: 1;
 }
 .btn{
     border: solid 2px var(--color5);
@@ -130,7 +138,6 @@ img{
     top: 0;
     left: 0;
     display: none;
-    transition: 0.5s ease-in-out;
 }
 .fa-play{
     color: var(--color3);
@@ -253,6 +260,93 @@ footer{
     background-color: var(--color2);
     width: 100%;
     height: 75px;
+    padding: 10px;
+}
+.now-playing{
+    width: 250px;
+}
+.img-foot{
+    max-width: 50px;
+    min-width: 30px;
+}
+.singer-song{
+    padding-left: 10px;
+}
+.singer-song h2{
+    font-size: 0.7rem;
+    color: var(--color5);
+}
+.singer-song span{
+    font-size: 0.6rem;
+}
+.ico-now-playing{
+    padding-left: 30px;
+}
+.ico-foot{
+    padding: 5px;
+    transition: 0.5s ease-in-out;
+    width: fit-content;
+}
+.ico-foot:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: var(--color7);
+}
+.control{
+    width: 45%;
+    text-align: center;
+    margin: 0 auto;
+}
+.clicker{
+    color: var(--color5);
+    font-size: 1.2rem;
+}
+.fa-circle-play{
+    font-size: 1.5rem;
+}
+.clicker i{
+    padding: 0 15px;
+}
+.clicker i:hover{
+    cursor: pointer;
+}
+.time{
+    padding: 10px 0;
+}
+.timeline{
+    width: 60%;
+    position: relative;
+}
+.time span{
+    color: var(--color5);
+    font-size: 0.7rem;
+    padding: 0 15px;
+}
+.time-total{
+    width: 100%;
+    height: 1px;
+    border: 2px solid grey;
+    border-radius: 15px;
+
+}
+.time-passed{
+    border: 2px solid var(--color7);
+    border-radius: 15px;
+    width: 9%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: none;
+}
+.timeline:hover{
+    cursor:pointer;
+}
+.timeline:hover .time-passed{
+    display: block;
+}
+.volume{
+    width: 250px;
+    text-align: right;
 }
 /************************* 
           @MEDIA
@@ -265,6 +359,26 @@ footer{
 @media all and (max-width: 700px){
     .box{
         width: calc(100% / 2 - 20px);
+    }
+    .now-playing{
+        width: 20%;
+    }
+    .ico-now-playing{
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    .ico-foot{
+        padding: 2px;
+    }
+    .clicker{
+        color: var(--color5);
+        font-size: 1rem;
+    }
+    .fa-circle-play{
+        font-size: 1.2rem;
+    }
+    .volume{
+        width: 35%;
     }
 }
 @media all and (max-width: 600px){
