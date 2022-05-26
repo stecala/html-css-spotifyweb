@@ -220,8 +220,7 @@ nav ul li:hover,
     font-weight: bold;
 }
 .playlist{
-    min-height: 150px;
-    height: 20vh;
+    min-height: 50px;
     overflow-y: auto;
 }
 .playlist::-webkit-scrollbar {
@@ -300,6 +299,7 @@ footer{
 .clicker{
     color: var(--color5);
     font-size: 1.2rem;
+    width: 100%;
 }
 .fa-circle-play{
     font-size: 1.5rem;
@@ -324,10 +324,8 @@ footer{
 }
 .time-total{
     width: 100%;
-    height: 1px;
     border: 2px solid grey;
     border-radius: 15px;
-
 }
 .time-passed{
     border: 2px solid var(--color7);
@@ -338,15 +336,30 @@ footer{
     left: 0%;
     display: none;
 }
+.ball{
+    position: absolute;
+    color: var(--color5);
+    left: 9%;
+    display: none;
+}
 .timeline:hover{
     cursor:pointer;
 }
-.timeline:hover .time-passed{
+.timeline:hover .time-passed,
+.timeline:hover .ball{
     display: block;
 }
 .volume{
     width: 250px;
     text-align: right;
+}
+.ico-volume{
+    padding-right: 10px;
+    color: white;
+    font-size: 0.9rem;
+}
+.ico-volume:hover{
+    cursor: pointer;
 }
 /************************* 
           @MEDIA
@@ -399,4 +412,15 @@ footer{
         margin: 0 auto;
     }
 }
-
+@media all and (max-width: 550px){
+    .control{
+        width: 65%;
+    }
+    .volume{
+        width: 7%;
+    }
+    .volume .timeline{
+        display: none;
+        flex-direction: column;    
+    }
+}
